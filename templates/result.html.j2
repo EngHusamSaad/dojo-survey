@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./static/css/styles.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <title>Result !</title>
+</head>
+<h1>Result !</h1>
+
+<body>
+
+
+        {% for item in items%}
+
+        <label class="result">Name : </label>
+        <label class="result">{{ item.name }} </label><br><br>
+
+        <label class="result">Dojo Location:</label>
+        <label class="result">{{ item.location }}</label><br><br>
+
+        <label class="result">Favaratie Langauge:</label>
+        <label class="result">{{ item.lang }}</label><br><br>
+
+        <label class="result">Comment :</label>
+        <label class="result">{{ item.comment }}</label><br><br>
+        <hr><hr>
+
+        {% endfor %}
+
+        
+
+        <a href="/">Go Back</a>
+  
+
+</body>
+
+</html>

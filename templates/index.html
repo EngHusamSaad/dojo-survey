@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./static/css/styles.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+   
+
+    
+    <title>Main Page</title>
+</head>
+<h1>Dojo Survey App</h1>
+
+<body>
+
+    <div class="main">
+
+
+
+        <form action="/addnew" method="post" class="formbody">
+
+
+            <label for="Name">Your Name: </label>
+            <input type="text" name="name" placeholder="Type your Name HERE !"><br>
+
+
+
+            <label for="dojolocation" class="dojolocation">Dojo Location:</label>
+            <select name="location" id="dojolocation">
+                <option value="jenin">Jenin</option>
+                <option value="nablus">nablus</option>
+                <option value="Ramallah">Ramallah</option>
+                <option value="hebron">Hebron</option>
+            </select><br>
+
+            <label for="favlang">Favaratie Langauge:</label>
+            <select name="lang" id="favaratielangauge">
+                <option value="python">Python</option>
+                <option value="C++">C++</option>
+                <option value="java">Java</option>
+            </select><br>
+
+            <label for="comment">Comment (Optional)</label><br>
+            <textarea name="comment" id="comment" cols="50" rows="5"></textarea><br>
+
+            <button>Add New</button>
+           
+
+
+
+
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>
